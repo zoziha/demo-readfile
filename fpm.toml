@@ -1,9 +1,8 @@
 name = "readfile-bench"
 version = "0.1.0"
-license = "license"
-author = "zoziha"
+license = "MIT"
+author = "fpm maintainers"
 maintainer = "zuo.zhihua@qq.com"
-copyright = "Copyright 2023, zoziha"
 [build]
 auto-executables = true
 auto-tests = true
@@ -16,5 +15,5 @@ implicit-typing = false
 implicit-external = false
 source-form = "free"
 [dependencies]
-timer = { git = "https://gitee.com/zoziha/timer.git" }
+timer = { git = "https://github.com/zoziha/timer.git" }
 openmp = "*"

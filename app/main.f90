@@ -16,15 +16,16 @@ program main
     print *, 'Elapsed time: ', tmr%toc(), 's'
     print *, lines(size(lines))%s, size(lines)
 
-    ! call tmr%tic()
-    ! do i = 1, 1000
-    !     rewind (1)
-    !     lines = readfile(1)
-    ! end do
-    ! print *, 'Elapsed time: ', tmr%toc(), 's'
-    ! print *, lines(size(lines))%s, size(lines)
-    ! close (1)
+    call tmr%tic()
+    do i = 1, 1000
+        rewind (1)
+        lines = readfile(1)
+    end do
+    print *, 'Elapsed time: ', tmr%toc(), 's'
+    print *, lines(size(lines))%s, size(lines)
+    close (1)
 
+    ! check for another file
     open (1, file='fpm.toml', status='old', action='read')
     rewind (1)
     lines = readfile(1)
